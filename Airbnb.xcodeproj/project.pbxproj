@@ -13,6 +13,7 @@
 		C6A23A802D83603100131114 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A23A7B2D83603100131114 /* ContentView.swift */; };
 		C6A23A8F2D83621900131114 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A23A8E2D83621900131114 /* ExploreView.swift */; };
 		C6A23A912D8363C300131114 /* ListingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A23A902D8363C300131114 /* ListingItemView.swift */; };
+		C6A23A952D836F1600131114 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A23A942D836F1600131114 /* SearchAndFilterBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C6A23A7B2D83603100131114 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C6A23A8E2D83621900131114 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		C6A23A902D8363C300131114 /* ListingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingItemView.swift; sourceTree = "<group>"; };
+		C6A23A942D836F1600131114 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C6A23A8E2D83621900131114 /* ExploreView.swift */,
+				C6A23A942D836F1600131114 /* SearchAndFilterBar.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				C6A23A7F2D83603100131114 /* AirbnbApp.swift in Sources */,
 				C6A23A912D8363C300131114 /* ListingItemView.swift in Sources */,
 				C6A23A8F2D83621900131114 /* ExploreView.swift in Sources */,
+				C6A23A952D836F1600131114 /* SearchAndFilterBar.swift in Sources */,
 				C6A23A802D83603100131114 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
