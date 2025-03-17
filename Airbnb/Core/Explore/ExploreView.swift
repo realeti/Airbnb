@@ -15,7 +15,8 @@ struct ExploreView: View {
                 scrollItems()
             }
             .navigationDestination(for: Int.self) { listing in
-                Text("Listing detail view...")
+                ListingDetailView()
+                    .toolbar(.hidden)
             }
         }
     }
