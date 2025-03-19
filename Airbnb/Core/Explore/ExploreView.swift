@@ -8,15 +8,27 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @State private var showDestionationSearchView = false
+    
     var body: some View {
         NavigationStack {
-            ScrollView {
-                SearchAndFilterBar()
-                scrollItems()
-            }
-            .navigationDestination(for: Int.self) { listing in
-                ListingDetailView()
-                    .toolbar(.hidden)
+            if showDestionationSearchView {
+                DestinationSearchView(show: $showDestionationSearchView)
+            } else {
+                ScrollView {
+                    SearchAndFilterBar()
+                        .onTapGesture {
+                            withAnimation(.snappy) {
+                                showDestionationSearchView.toggle()
+                            }
+                        }
+                    
+                    scrollItems()
+                }
+                .navigationDestination(for: Int.self) { listing in
+                    ListingDetailView()
+                        .toolbar(.hidden)
+                }
             }
         }
     }
