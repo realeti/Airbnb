@@ -12,6 +12,12 @@
 		C66464832D84A883009B96B0 /* ListingRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66464822D84A883009B96B0 /* ListingRatingView.swift */; };
 		C66464852D84A8E4009B96B0 /* ListingDetailTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66464842D84A8E4009B96B0 /* ListingDetailTextView.swift */; };
 		C689C3FB2D8B4117008B9B43 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C689C3FA2D8B4117008B9B43 /* DestinationSearchView.swift */; };
+		C6986D412D8C95A700255B1F /* CollapsedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D402D8C95A700255B1F /* CollapsedPickerView.swift */; };
+		C6986D442D8C96E300255B1F /* CollapsibleDestinationViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D432D8C96E300255B1F /* CollapsibleDestinationViewModifier.swift */; };
+		C6986D462D8C97DA00255B1F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D452D8C97DA00255B1F /* SearchView.swift */; };
+		C6986D482D8C995700255B1F /* DateSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D472D8C995700255B1F /* DateSelectionView.swift */; };
+		C6986D4A2D8C9A0D00255B1F /* NumGuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D492D8C9A0D00255B1F /* NumGuestsView.swift */; };
+		C6986D4C2D8C9BE500255B1F /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D4B2D8C9BE500255B1F /* SearchHeaderView.swift */; };
 		C6A23A7D2D83603100131114 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A23A772D83603100131114 /* Preview Assets.xcassets */; };
 		C6A23A7E2D83603100131114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A23A7A2D83603100131114 /* Assets.xcassets */; };
 		C6A23A7F2D83603100131114 /* AirbnbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A23A792D83603100131114 /* AirbnbApp.swift */; };
@@ -27,6 +33,12 @@
 		C66464822D84A883009B96B0 /* ListingRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRatingView.swift; sourceTree = "<group>"; };
 		C66464842D84A8E4009B96B0 /* ListingDetailTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailTextView.swift; sourceTree = "<group>"; };
 		C689C3FA2D8B4117008B9B43 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
+		C6986D402D8C95A700255B1F /* CollapsedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedPickerView.swift; sourceTree = "<group>"; };
+		C6986D432D8C96E300255B1F /* CollapsibleDestinationViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleDestinationViewModifier.swift; sourceTree = "<group>"; };
+		C6986D452D8C97DA00255B1F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C6986D472D8C995700255B1F /* DateSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionView.swift; sourceTree = "<group>"; };
+		C6986D492D8C9A0D00255B1F /* NumGuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumGuestsView.swift; sourceTree = "<group>"; };
+		C6986D4B2D8C9BE500255B1F /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		C6A23A662D83602900131114 /* Airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A23A772D83603100131114 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6A23A792D83603100131114 /* AirbnbApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirbnbApp.swift; sourceTree = "<group>"; };
@@ -56,6 +68,27 @@
 				C66464842D84A8E4009B96B0 /* ListingDetailTextView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C6986D3F2D8C957600255B1F /* DestinationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C6986D402D8C95A700255B1F /* CollapsedPickerView.swift */,
+				C6986D472D8C995700255B1F /* DateSelectionView.swift */,
+				C689C3FA2D8B4117008B9B43 /* DestinationSearchView.swift */,
+				C6986D492D8C9A0D00255B1F /* NumGuestsView.swift */,
+				C6986D4B2D8C9BE500255B1F /* SearchHeaderView.swift */,
+				C6986D452D8C97DA00255B1F /* SearchView.swift */,
+			);
+			path = DestinationSearch;
+			sourceTree = "<group>";
+		};
+		C6986D422D8C96D200255B1F /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C6986D432D8C96E300255B1F /* CollapsibleDestinationViewModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		C6A23A5D2D83602900131114 = {
@@ -121,6 +154,7 @@
 		C6A23A842D83610F00131114 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C6986D422D8C96D200255B1F /* Modifiers */,
 				C664647F2D84A628009B96B0 /* Components */,
 				C6A23A872D83617E00131114 /* Explore */,
 				C6A23A882D83618600131114 /* Listings */,
@@ -151,9 +185,9 @@
 		C6A23A872D83617E00131114 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				C6986D3F2D8C957600255B1F /* DestinationSearch */,
 				C6A23A8E2D83621900131114 /* ExploreView.swift */,
 				C6A23A942D836F1600131114 /* SearchAndFilterBar.swift */,
-				C689C3FA2D8B4117008B9B43 /* DestinationSearchView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -279,12 +313,18 @@
 				C66464812D84A643009B96B0 /* ListingImageCarouselView.swift in Sources */,
 				C6A23A7F2D83603100131114 /* AirbnbApp.swift in Sources */,
 				C6A23A912D8363C300131114 /* ListingItemView.swift in Sources */,
+				C6986D482D8C995700255B1F /* DateSelectionView.swift in Sources */,
 				C66464852D84A8E4009B96B0 /* ListingDetailTextView.swift in Sources */,
 				C6A23A8F2D83621900131114 /* ExploreView.swift in Sources */,
+				C6986D442D8C96E300255B1F /* CollapsibleDestinationViewModifier.swift in Sources */,
+				C6986D412D8C95A700255B1F /* CollapsedPickerView.swift in Sources */,
 				C689C3FB2D8B4117008B9B43 /* DestinationSearchView.swift in Sources */,
+				C6986D462D8C97DA00255B1F /* SearchView.swift in Sources */,
 				C66464832D84A883009B96B0 /* ListingRatingView.swift in Sources */,
+				C6986D4C2D8C9BE500255B1F /* SearchHeaderView.swift in Sources */,
 				C6A23A952D836F1600131114 /* SearchAndFilterBar.swift in Sources */,
 				C664647E2D84A570009B96B0 /* ListingDetailView.swift in Sources */,
+				C6986D4A2D8C9A0D00255B1F /* NumGuestsView.swift in Sources */,
 				C6A23A802D83603100131114 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
