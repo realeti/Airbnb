@@ -27,7 +27,8 @@ struct ListingDetailView: View {
                                 .fill(.white)
                                 .frame(width: 32, height: 32)
                         }
-                        .padding(32)
+                        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top ?? 44)
+                        .padding(.leading, 32)
                 }
             }
             
