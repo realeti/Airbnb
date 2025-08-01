@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ListingRatingView: View {
+    let listing: Listing
+    
     var body: some View {
         HStack(spacing: 2) {
             Image(systemName: "star.fill")
             
-            Text("4.86")
+            Text(String(format: "%.2f", listing.rating))
         }
         .foregroundStyle(.black)
     }
 }
 
 #Preview {
-    ListingRatingView()
+    ListingRatingView(listing: DeveloperPreview.shared.listings[0])
 }

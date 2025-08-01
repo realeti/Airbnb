@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ListingDetailTextView: View {
+    let listing: Listing
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Miami, Florida")
+            Text("\(listing.city), \(listing.state)")
                 .fontWeight(.semibold)
             
             Text("12 mi away")
@@ -20,7 +22,7 @@ struct ListingDetailTextView: View {
                 .foregroundStyle(.gray)
             
             HStack(spacing: 4) {
-                Text("$567")
+                Text("$\(listing.pricePerNight)")
                     .fontWeight(.semibold)
                 
                 Text("night")
@@ -31,5 +33,5 @@ struct ListingDetailTextView: View {
 }
 
 #Preview {
-    ListingDetailTextView()
+    ListingDetailTextView(listing: DeveloperPreview.shared.listings[0])
 }

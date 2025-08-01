@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ExploreView: View {
+    @State private var viewModel = ExploreViewModel(service: ExploreService())
     @State private var showDestionationSearchView = false
     
     var body: some View {
@@ -25,8 +26,8 @@ struct ExploreView: View {
                     
                     scrollItems()
                 }
-                .navigationDestination(for: Int.self) { listing in
-                    ListingDetailView()
+                .navigationDestination(for: Listing.self) { listing in
+                    ListingDetailView(listing: listing)
                         .toolbar(.hidden)
                 }
             }
@@ -36,9 +37,9 @@ struct ExploreView: View {
     @ViewBuilder
     func scrollItems() -> some View {
         LazyVStack(spacing: 32) {
-            ForEach(0 ... 10, id: \.self) { listing in
+            ForEach(viewModel.listings) { listing in
                 NavigationLink(value: listing) {
-                    ListingItemView()
+                    ListingItemView(listing: listing)
                         .frame(height: 400)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }

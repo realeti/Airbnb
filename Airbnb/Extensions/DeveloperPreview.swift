@@ -8,28 +8,30 @@
 import Foundation
 
 class DeveloperPreview {
+    static let shared = DeveloperPreview()
+    
     var listings: [Listing] = [
         Listing(
             id: UUID().uuidString,
             ownerUid: UUID().uuidString,
             ownerName: "John Smith",
             ownerImageUrl: "male-profile-photo",
-            numberOfBedrooms: 4,
-            numberOfBathrooms: 3,
+            numberOfBedrooms: 2,
+            numberOfBathrooms: 1,
             numberOfGuests: 4,
-            numberOfBeds: 4,
-            pricePerNight: 567,
-            latitude: 25.7850,
-            longitude: -80.1936,
-            imageURLs: ["listing-1", "listing-2", "listing-3", "listing-4"],
+            numberOfBeds: 3,
+            pricePerNight: 99,
+            latitude: 48.14978653011442,
+            longitude: 24.80690121534497,
+            imageURLs: ["listing-5", "listing-6", "listing-7", "listing-8"],
             address: "124 Main St",
-            city: "Miami",
-            state: "Florida",
-            title: "Miami Villa",
-            rating: 4.86,
+            city: "Verkhovina",
+            state: "Ukraine",
+            title: "Krokus House",
+            rating: 4.99,
             features: [.selfCheckIn, .superHost],
-            amenities: [.wifi, .alarmSystem, .balcony, .laundry, .tv],
-            type: .villa
+            amenities: [.wifi, .balcony, .laundry, .tv, .kitchen],
+            type: .house
         ),
         
         Listing(
