@@ -15,9 +15,10 @@ struct ExploreView: View {
         NavigationStack {
             if showDestionationSearchView {
                 DestinationSearchView(show: $showDestionationSearchView)
+                    .environment(viewModel)
             } else {
                 ScrollView {
-                    SearchAndFilterBar()
+                    SearchAndFilterBar(location: $viewModel.searchLocation)
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 showDestionationSearchView.toggle()
@@ -37,7 +38,7 @@ struct ExploreView: View {
     @ViewBuilder
     func scrollItems() -> some View {
         LazyVStack(spacing: 32) {
-            ForEach(viewModel.listings) { listing in
+            ForEach(viewModel.filteredListings) { listing in
                 NavigationLink(value: listing) {
                     ListingItemView(listing: listing)
                         .frame(height: 400)

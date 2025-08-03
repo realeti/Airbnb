@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct SearchHeaderView: View {
+    @Environment(ExploreViewModel.self) private var viewModel
     @Binding var show: Bool
-    @Binding var destination: String
     
     var body: some View {
         HStack {
             Button {
                 withAnimation(.snappy) {
+                    viewModel.updateListingsForLocation()
                     show.toggle()
                 }
             } label: {
@@ -25,9 +26,9 @@ struct SearchHeaderView: View {
             
             Spacer()
             
-            if !destination.isEmpty {
+            if !viewModel.searchLocation.isEmpty {
                 Button("Clear") {
-                    destination = ""
+                    viewModel.searchLocation = ""
                 }
                 .foregroundStyle(.black)
                 .font(.subheadline)
@@ -40,7 +41,6 @@ struct SearchHeaderView: View {
 
 #Preview {
     SearchHeaderView(
-        show: .constant(false),
-        destination: .constant("text")
+        show: .constant(false)
     )
 }

@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Environment(ExploreViewModel.self) private var viewModel
     @Binding var selectedOption: DestinationSearchOptions
-    @Binding var destination: String
+    @Binding var show: Bool
     
     var body: some View {
+        @Bindable var viewModel = viewModel
+        
         VStack(alignment: .leading) {
             if selectedOption == .location {
                 Text("Where to?")
@@ -22,8 +25,12 @@ struct SearchView: View {
                     Image(systemName: "magnifyingglass")
                         .imageScale(.small)
                     
-                    TextField("Search destinations", text: $destination)
+                    TextField("Search destinations", text: $viewModel.searchLocation)
                         .font(.subheadline)
+                        .onSubmit {
+                            viewModel.updateListingsForLocation()
+                            show.toggle()
+                        }
                 }
                 .frame(height: 44)
                 .padding(.horizontal)
@@ -47,6 +54,6 @@ struct SearchView: View {
 #Preview {
     SearchView(
         selectedOption: .constant(.location),
-        destination: .constant("")
+        show: .constant(false)
     )
 }

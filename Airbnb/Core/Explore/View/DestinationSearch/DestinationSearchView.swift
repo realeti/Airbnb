@@ -14,23 +14,22 @@ enum DestinationSearchOptions {
 }
 
 struct DestinationSearchView: View {
+    @Environment(ExploreViewModel.self) private var viewModel
     @Binding var show: Bool
-    @State private var destination = ""
     @State private var selectedOption: DestinationSearchOptions = .location
     @State private var startDate = Date()
     @State private var endDate = Date()
     @State private var numGuests = 0
     
     var body: some View {
+        @Bindable var viewModel = viewModel
+        
         VStack {
-            SearchHeaderView(
-                show: $show,
-                destination: $destination
-            )
+            SearchHeaderView(show: $show)
             
             SearchView(
                 selectedOption: $selectedOption,
-                destination: $destination
+                show: $show
             )
             .onTapGesture {
                 withAnimation(.snappy) { selectedOption = .location }
@@ -59,5 +58,7 @@ struct DestinationSearchView: View {
 }
 
 #Preview {
-    DestinationSearchView(show: .constant(false))
+    DestinationSearchView(
+        show: .constant(false)
+    )
 }
